@@ -2,18 +2,14 @@
 
 <?php
 header('Content-Type: text/html; charset=UTF-8');
-function inverterString($texto) {
-    $invertida = "";
 
-    // percorre a string de trás para frente
-    for ($i = strlen($texto) - 1; $i >= 0; $i--) {
-        $invertida .= $texto[$i];
-    }
-
-    return $invertida;
+function inverterTexto($texto) {
+    return implode('', array_reverse(mb_str_split($texto)));
 }
+// mb_str_split($texto) = Divide a string em um array de letras
+// array_reverse(...) = Inverte a ordem dos elementos do array
+//implode('', ...) = Junta os elementos do array em uma string - '' significa: sem separador
 
-// Exemplo de uso
-echo inverterString("Juliana"); 
+echo inverterTexto("R O M A"); 
 ?>
 

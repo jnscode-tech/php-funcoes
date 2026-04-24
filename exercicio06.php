@@ -21,7 +21,7 @@ function calcularDesconto($valor) {
 }
 
 // Exemplo de uso
-$compra = 350;
+$compra = 560;
 $resultado = calcularDesconto($compra);
 
 echo "Valor original: R$ " . $compra . "<br>";
